@@ -63,6 +63,10 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # ...existing code...
+  config.public_file_server.enabled = false
+# ...existing code...
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
