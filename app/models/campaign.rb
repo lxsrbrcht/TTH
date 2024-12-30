@@ -1,5 +1,6 @@
 class Campaign < ApplicationRecord
-  belongs_to :user, dependent: :destroy
+  belongs_to :user
+  has_many :sessions, dependent: :destroy
 
   validates :title, presence: true
   validates :synopsis, presence: true
