@@ -1,0 +1,7 @@
+
+<%= link_to 'Créer une Nouvelle Campagne', new_campaign_path %>
+<% unless @campaigns.empty? %>
+  <% @campaigns.each do |campaign| %>
+    <%= render 'campaign_card', campaign: campaign %>
+  <% end %>
+<% end %>

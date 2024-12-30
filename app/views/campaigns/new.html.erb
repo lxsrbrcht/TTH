@@ -1,0 +1,8 @@
+<%= simple_form_for @campaign do |f| %>
+  <%= f.input :title, label: 'Titre' %>
+  <%= f.input :synopsis, as: :text, hint: 'Synopsis' %>
+  <%= f.input :progress, as: :select, collection: Campaign::PROGRESS %>
+  <%= f.input :format, as: :select, collection: Campaign::FORMAT %>
+  <%= f.input :setting, hint: 'exemple : Royaumes Oubliés, Planescape, Eberron', label: 'Cadre (optionnel)', required: false  %>
+  <%= f.button :submit, 'Créer la Campagne', class:"btn btn-primary" %>
+<% end %>
