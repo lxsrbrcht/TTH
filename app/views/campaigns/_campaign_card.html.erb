@@ -1,0 +1,17 @@
+<%= link_to campaign_path(campaign), class: "campaign-card-link", style:"text-decoration: none" do %>
+  <div class="campaign-card mt-3">
+    <div class="campaign-title">
+      <%= campaign.title %>
+    </div>
+    <div class="campaign-data">
+      <div class="campaign-info">
+        <ul>
+          <li> Format: <%= campaign.format %></li>
+          <li> Cadre: <%= campaign.setting %></li>
+          <li> Avancement: <%= campaign.progress %></li>
+        </ul>
+        <%= campaign.synopsis %>
+      </div>
+    </div>
+  </div>
+<% end %>

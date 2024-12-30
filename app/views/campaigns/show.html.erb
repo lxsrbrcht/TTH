@@ -1,0 +1,30 @@
+<h1><%= @campaign.title %></h1>
+<%= link_to 'Modifier', edit_campaign_path(@campaign), class: "btn btn-primary" %>
+<%= link_to 'Supprimer', campaign_path(@campaign), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+<div class="campaign-data">
+  <div class="campaign-info">
+    <ul>
+      <li> Format: <%= @campaign.format %></li>
+      <li> Cadre: <%= @campaign.setting %></li>
+      <li> Avancement: <%= @campaign.progress %></li>
+    </ul>
+    <%= @campaign.synopsis %>
+  </div>
+</div>
+<div>
+  <div class="pnj-list">
+    <h3>Personnages</h3>
+    <ul>
+        <li> Le Maire </li>
+        <li> Le Forgeron </li>
+        <li> Le Tavernier </li>
+    </ul>
+  </div>
+  <div>
+    <h3>Sessions</h3>
+    <ul>
+      <li>Session 1</li>
+      <li>Session 2</li>
+      <li>Session 3</li>
+  </div>
+</div>
